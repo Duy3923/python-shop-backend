@@ -1,0 +1,33 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block dangky %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Đăng Kí</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary btn-block mb-4">Đăng Ký</button>
+        {% comment %} <div class="mb-3">
+            <label class="form-label" for="username">Tài Khoản</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="password">Mật Khẩu</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="password2">Nhập Lại Mật Khẩu</label>
+            <input type="password" id="password2" name="password2" class="form-control" required>
+        </div>
+        <div class="row mb-4">
+            <div class="col d-flex align-items-center">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Nhớ đăng nhập</label>
+                </div>
+            </div>
+        </div> {% endcomment %}
+     
+    </form>
+</div>
+{% endblock %}
